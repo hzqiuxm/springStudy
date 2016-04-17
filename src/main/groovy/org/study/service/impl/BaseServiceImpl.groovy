@@ -43,8 +43,8 @@ class BaseServiceImpl implements IBaseService{
         zoos << o
         return o
     }
-    /*@Override
-    def Zoo update(Zoo model) {
+    @Override
+    Zoo update(Zoo model) {
         Zoo o = model.clone()
         zoos.collect{
             if(it.id == model.id){
@@ -53,8 +53,13 @@ class BaseServiceImpl implements IBaseService{
         }
         return o
     }
+    /**
+     * 这段代码逻辑有错误，没有实现部分更新
+     * @param model
+     * @return
+     */
     @Override
-    def Zoo patch(Zoo model) {
+    Zoo patch(Zoo model) {
         Zoo o = null
         zoos.collect{
             if(it.id == model.id){
@@ -65,10 +70,10 @@ class BaseServiceImpl implements IBaseService{
             }
         }
         return o
-    }*/
+    }
 
     @Override
-    def void delete(id) {
+    void delete(id) {
         zoos.remove(zoos.find{
             it.id == id
         })

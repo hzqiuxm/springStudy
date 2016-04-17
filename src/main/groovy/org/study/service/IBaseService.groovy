@@ -37,22 +37,22 @@ interface IBaseService {
      * @return
      */
     Zoo create(Zoo model)
-//    /**
-//     * 更新对象
-//     * 示例：
-//     * PUT "/zoos"
-//     * @param model
-//     * @return
-//     */
-//    def Zoo update(Zoo model)
-//    /**
-//     * 部分更新对象
-//     * 示例：
-//     * PATCH "/zoos"
-//     * @param model
-//     * @return
-//     */
-//    def Zoo patch(Zoo model)
+    /**
+     * 更新对象
+     * 示例：
+     * PUT "/zoos"
+     * @param model
+     * @return
+     */
+    Zoo update(Zoo model)
+    /**
+     * 部分更新对象
+     * 示例：
+     * PATCH "/zoos"
+     * @param model
+     * @return
+     */
+    Zoo patch(Zoo model)
     /**
      * 根据id删除对象
      * 示例：

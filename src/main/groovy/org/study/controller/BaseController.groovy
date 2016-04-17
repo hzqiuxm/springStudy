@@ -43,7 +43,7 @@ class BaseController{
         returnOne(service.create(model))
     }
 
-    /*@RequestMapping(value = "/zoos",method = RequestMethod.PATCH,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/zoos",method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     ResponseEntity<Zoo> put(@RequestBody Zoo model) {
         log.info("request --> patch update ${simpleName} by ${JsonUtil.prettyPrint(model)}")
 
@@ -54,7 +54,7 @@ class BaseController{
         log.info("request --> patch update ${simpleName} by ${JsonUtil.prettyPrint(model)}")
 
         returnOne(service.patch(model))
-    }*/
+    }
 
     @RequestMapping(value = "/zoos/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<Zoo> delete(@PathVariable id){
